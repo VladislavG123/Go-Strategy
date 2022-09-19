@@ -11,7 +11,7 @@ func NewCannonArmament() *CannonArmament {
 	return &CannonArmament{}
 }
 
-func (a *CannonArmament) fire() {
+func (a *CannonArmament) Fire() {
 	fmt.Println("Boom!")
 }
 
@@ -24,7 +24,7 @@ func NewMachineGunArmament() *MachineGunArmament {
 	return &MachineGunArmament{}
 }
 
-func (m *MachineGunArmament) fire() {
+func (m *MachineGunArmament) Fire() {
 	fmt.Println("Trrrrrrrr")
 }
 
@@ -37,6 +37,6 @@ func NewNoArmament() *NoArmament {
 	return &NoArmament{}
 }
 
-func (m *NoArmament) fire() {
-	fmt.Println("Can't fire")
+func (m *NoArmament) Fire() {
+	fmt.Println("Can't Fire")
 }

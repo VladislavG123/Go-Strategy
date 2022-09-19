@@ -1,19 +1,19 @@
 package main
 
 type IMovementBehavior interface {
-	move()
+	Move()
 }
 
 type IFireBehavior interface {
-	fire()
+	Fire()
 }
 
 type ITank interface {
-	move()
-	fire()
+	Move()
+	Fire()
 
-	setMovementBehavior(behavior IMovementBehavior)
-	setFireBehavior(behavior IFireBehavior)
+	SetMovementBehavior(behavior IMovementBehavior)
+	SetFireBehavior(behavior IFireBehavior)
 }
 
 // Base Tank
@@ -23,18 +23,18 @@ type BaseTank struct {
 	movementBehavior IMovementBehavior
 }
 
-func (tank *BaseTank) move() {
-	tank.movementBehavior.move()
+func (tank *BaseTank) Move() {
+	tank.movementBehavior.Move()
 }
 
-func (tank *BaseTank) fire() {
-	tank.fireBehavior.fire()
+func (tank *BaseTank) Fire() {
+	tank.fireBehavior.Fire()
 }
 
-func (tank *BaseTank) setMovementBehavior(behavior IMovementBehavior) {
+func (tank *BaseTank) SetMovementBehavior(behavior IMovementBehavior) {
 	tank.movementBehavior = behavior
 }
 
-func (tank *BaseTank) setFireBehavior(behavior IFireBehavior) {
+func (tank *BaseTank) SetFireBehavior(behavior IFireBehavior) {
 	tank.fireBehavior = behavior
 }

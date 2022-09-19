@@ -11,7 +11,7 @@ func NewWheelsMovement() *WheelsMovement {
 	return &WheelsMovement{}
 }
 
-func (m *WheelsMovement) move() {
+func (m *WheelsMovement) Move() {
 	fmt.Println("Moving be wheels")
 }
 
@@ -24,7 +24,7 @@ func NewTracksMovement() *TracksMovement {
 	return &TracksMovement{}
 }
 
-func (m *TracksMovement) move() {
+func (m *TracksMovement) Move() {
 	fmt.Println("Moving be tracks")
 }
 
@@ -37,6 +37,6 @@ func NewNoMovement() *NoMovement {
 	return &NoMovement{}
 }
 
-func (m *NoMovement) move() {
-	fmt.Println("Can't move")
+func (m *NoMovement) Move() {
+	fmt.Println("Can't Move")
 }
