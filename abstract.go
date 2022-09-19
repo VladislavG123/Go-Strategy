@@ -9,11 +9,11 @@ type IFireBehavior interface {
 }
 
 type ITank interface {
-	Move()
-	Fire()
-
 	SetMovementBehavior(behavior IMovementBehavior)
 	SetFireBehavior(behavior IFireBehavior)
+
+	IMovementBehavior
+	IFireBehavior
 }
 
 // Base Tank
